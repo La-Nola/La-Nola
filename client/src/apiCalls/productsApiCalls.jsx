@@ -34,12 +34,11 @@ export const productPreviewer = async (
 };
  */
 
-
 import axios from "axios";
 
 export const getCandles = async (dispatchProducts) => {
   try {
-    const response = await axios.get(`http://localhost:8000/candles`);
+    const response = await axios.get(`https://la-nola-backend.onrender.com/candles`);
     await dispatchProducts({
       type: "FETCH_CANDLES_SUCCESS",
       payload: response.data,
@@ -51,7 +50,7 @@ export const getCandles = async (dispatchProducts) => {
 
 export const getPostcards = async (dispatchProducts) => {
   try {
-    const response = await axios.get(`http://localhost:8000/postcards`);
+    const response = await axios.get(`https://la-nola-backend.onrender.com/postcards`);
     await dispatchProducts({
       type: "FETCH_POSTCARDS_SUCCESS",
       payload: response.data,
@@ -63,7 +62,7 @@ export const getPostcards = async (dispatchProducts) => {
 
 export const getKidsClothes = async (dispatchProducts) => {
   try {
-    const response = await axios.get(`http://localhost:8000/kidsclothes`);
+    const response = await axios.get(`https://la-nola-backend.onrender.com/kidsclothes`);
     await dispatchProducts({
       type: "FETCH_KIDSCLOTHES_SUCCESS",
       payload: response.data,
@@ -72,3 +71,4 @@ export const getKidsClothes = async (dispatchProducts) => {
     console.log(error);
   }
 };
+
