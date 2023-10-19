@@ -26,16 +26,7 @@ const app = express();
 app.use(cookieParser());
 
 app.use(express.json({ limit: "1MB" }));
-app.use(
-  cors({
-    origin: [
-     
-      "https://lanola.onrender.com",
-       "http://localhost:3000",
-    ],
-    credentials: true,
-  })
-);
+app.use(cors());
 
 //setting up routes
 app.use("/kidsclothes", kidsclothesRouter);
