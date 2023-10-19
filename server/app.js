@@ -29,8 +29,7 @@ app.use(express.json({ limit: "1MB" }));
 app.use(
   cors({
     origin: [
-      "https://la-nola-backend.onrender.com",
-      "http://localhost:3000",
+      
       "https://lanola.onrender.com",
     ],
     credentials: true,
