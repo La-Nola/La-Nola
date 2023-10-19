@@ -29,7 +29,7 @@ app.use(express.json({ limit: "1MB" }));
 app.use(
   cors({
     origin: [
-      "https://vinylrecordshop-fe.onrender.com",
+      "https://la-nola-backend.onrender.com",
       "http://localhost:3000",
     ],
     credentials: true,
