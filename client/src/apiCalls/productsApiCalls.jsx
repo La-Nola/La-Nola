@@ -41,7 +41,7 @@ export const getCandles = async (dispatchProducts) => {
     const response = await axios.get(`https://la-nola-backend.onrender.com/candles`);
     await dispatchProducts({
       type: "FETCH_CANDLES_SUCCESS",
-      payload: response.data,
+      payload: response.data.data,
     });
   } catch (error) {
     console.log(error);
