@@ -374,7 +374,7 @@ export const login = async (req, res, next) => {
     // }
     // set users login status to true
     // user.isLoggedIn = true;
-    //await user.save();
+      await user.save();
     // call function to create and send tokens
     createSendToken(user, 201, res);
     // call successhandler
