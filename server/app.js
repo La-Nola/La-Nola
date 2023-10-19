@@ -31,6 +31,7 @@ app.use(
     origin: [
       "https://la-nola-backend.onrender.com",
       "http://localhost:3000",
+      "https://lanola.onrender.com",
     ],
     credentials: true,
   })
