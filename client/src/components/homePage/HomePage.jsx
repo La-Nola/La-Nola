@@ -139,7 +139,7 @@ const HomePage = () => {
           {/* Third Column */}
           <div className="parent relative overflow-hidden group md:h-88">
             <div className="lg:p-28 lg:m-6 md:p-8 p-2 m-2 text-right leading-4">
-              <h2 className="text-2xl text-secondary text-bold">Sonderangebote für Kerzen</h2>
+              <h2 className="text-3xl text-secondary text-bold">Sonderangebote für Kerzen</h2>
               {/* Content for the fourth row */}
               <p className="mt-8 leading-6">
                 Bei La-Nola freuen wir uns, Ihnen exklusive Rabatte auf unsere
