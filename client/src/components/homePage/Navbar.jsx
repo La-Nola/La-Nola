@@ -282,7 +282,7 @@ const Navbar = ({ isMobile }) => {
             className="relative group  "
           >
             <Link to="/aboutme" className="text-black tracking-wide ">
-              About Me
+              Über mich
               <span className="linkspacer"></span>
             </Link>
           </li>

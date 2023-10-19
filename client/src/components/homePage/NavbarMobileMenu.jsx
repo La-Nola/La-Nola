@@ -398,7 +398,7 @@ const NavbarMobileMenu = ({ isOpen, toggleMenu , setSearchValue, toggleSearch })
                 className="hover:text-lg transition duration-200 ease-in-out"
                 onClick={toggleMenu}
               >
-                About Me
+                Über mich
               </Link>
             </div>
 
