@@ -77,7 +77,9 @@ const Footer = () => {
 
             <form action="">
                 <input className="border-2 border-black p-2 w-full" type="text" placeholder="Geben Sie Ihre E-Mail Adresse ein"/>
+                <Link to="/signup">
                 <button type="submit" className="mt-4 border-black p-2 md:w-40 text-white bg-secondary w-full hover:bg-opacity-90">Anmelden</button>
+                </Link>
             </form>
         </div>
     </div>
