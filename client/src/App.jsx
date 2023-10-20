@@ -39,28 +39,28 @@ function App() {
 
             <Route
               path="/kidsclothes"
-              element={<ProductList product="kidsClothes" />}
+              element={<ProductList category="kidsClothes" />}
             >
               <Route
                 path="/kidsclothes/:subcategory"
-                element={<ProductList product="kidsClothes" />}
+                element={<ProductList category="kidsClothes" />}
               />
             </Route>
 
-            <Route path="/candles" element={<ProductList product="candles" />}>
+            <Route path="/candles" element={<ProductList category="candles" />}>
               <Route
                 path="/candles/:subcategory"
-                element={<ProductList product="candles" />}
+                element={<ProductList category="candles" />}
               />
             </Route>
 
             <Route
               path="/postcards"
-              element={<ProductList product="postcards" />}
+              element={<ProductList category="postcards" />}
             >
               <Route
                 path="/postcards/:subcategory"
-                element={<ProductList product="postcards" />}
+                element={<ProductList category="postcards" />}
               />
             </Route>
 
