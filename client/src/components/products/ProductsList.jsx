@@ -5,22 +5,22 @@ import ItemsOnSale from "../homePage/onSaleOrNew/ItemsOnSale";
 import { DataContext } from "../../store/context";
 import NewCollection from "../homePage/onSaleOrNew/NewCollection";
 
-const ProductsList = ({ category }) => {
+const ProductsList = ({ product }) => {
   const { subcategory } = useParams();
   const { productsState, searchValue } = useContext(DataContext);
 
   const [currentPage, setCurrentPage] = useState(1);
   const pageSize = 12; // Number of products to display per page
 
-// Reseting the current page when switching to another category
+  // Reseting the current page when switching to another category
   useEffect(() => {
     setCurrentPage(1);
-  }, [category , subcategory]);
+  }, [subcategory]);
 
   // Filter regular products based on subcategory
   const firstFilter = subcategory
     ? subcategory === "hosen"
-      ? productsState[category].data?.filter(
+      ? productsState[product].data?.filter(
           (productItem) =>
             productItem.subcategory === "jerseyhosen" ||
             productItem.subcategory === "kordhosen" ||
@@ -28,10 +28,10 @@ const ProductsList = ({ category }) => {
             productItem.subcategory === "musselinhosen" ||
             productItem.subcategory === "walkhosen"
         )
-      : productsState[category].data?.filter(
+      : productsState[product].data?.filter(
           (productItem) => productItem.subcategory === subcategory
         )
-    : productsState[category].data;
+    : productsState[product].data;
 
   const filteredProducts = firstFilter?.filter(
     (product) =>
@@ -68,9 +68,9 @@ const ProductsList = ({ category }) => {
     </h1>
       {/* Conditionally render SaleProductsList if subcategory is "onSale" or or "new-collection" otherwise render all the products accordingly*/}
       {subcategory === "sale" ? (
-        <ItemsOnSale product={category} />
+        <ItemsOnSale product={product} />
       ) : subcategory === "new-collection" ? (
-        <NewCollection product={category} />
+        <NewCollection product={product} />
       ) : (
         <div>
           {productsToDisplay?.length > 0 ? (
